@@ -3,7 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const modelsSlice = createSlice({
   name: 'models',
   initialState: {
-    flaskBottle: {},
+    flaskBottle: {
+      width: 40,
+      height: 60,
+      thickness: 20
+    },
     boxSphere: {
       size: 0.55
     },

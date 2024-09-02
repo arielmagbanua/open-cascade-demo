@@ -30,7 +30,15 @@ export default function BoxSphere() {
 
   const controls = (
     <form onSubmit={handleSubmit}>
-      <RangeInput value={sphereSize} onChange={handleSizeChange} />
+      <RangeInput
+        label="sphere size"
+        id="sphere-size"
+        name="sphere-size"
+        max="1"
+        step="0.01"
+        value={sphereSize}
+        onChange={handleSizeChange}
+      />
       <button className="model-update-button">Update</button>
     </form>
   );

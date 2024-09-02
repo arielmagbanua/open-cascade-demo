@@ -1,18 +1,16 @@
 import classNames from 'classnames';
 
-export default function RangeInput({ value, onChange, className }) {
+export default function RangeInput({ label, id, value, onChange, className, ...restProps }) {
   const classes = classNames('range-input-controls', className)
   return (
     <div className={classes}>
-      <label htmlFor="sphere-size">{`Sphere Size (${value}): `}</label>
+      <label htmlFor={id}>{`${label} (${value}): `}</label>
       <input
         value={value}
         type="range"
-        id="sphere-size"
-        name="sphere-size"
-        max="1"
-        step="0.01"
+        id={id}
         onChange={onChange}
+        {...restProps}
       />
     </div>
   );
