@@ -1,5 +1,7 @@
 :root {
   --header-height: 64px;
+  --primary-color: cadetblue;
+  --button-color: azure;
 }
 
 body, header, main, div, h1, h2, h3, p {

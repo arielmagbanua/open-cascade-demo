@@ -5,9 +5,10 @@ header {
   justify-content: start;
   width: 100%;
   height: var(--header-height);
-  background-color: cadetblue;
+  background-color: var(--primary-color);
   padding-left: 24px;
   padding-right: 24px;
+  box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.2), 0 4px 16px 0 rgba(0, 0, 0, 0.19);
 }
 
 .header__nav {
@@ -26,11 +27,11 @@ header {
 
 .header__nav__menu > li > a, .header__nav__menu > li > a:visited {
   text-decoration: none;
-  color: azure;
+  color: var(--button-color);
 }
 
 .header__nav__menu > li {
-  color: azure;
+  color: var(--button-color);
   cursor: pointer;
   margin-right: 32px;
   padding: 8px;
@@ -76,15 +77,17 @@ main {
 .page__container__controls, .range-input-controls {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
+}
+
+.page__container__controls > form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 .range-input-controls {
-  margin-right: 8px;
-}
-
-input.horizontal {
-  margin-left: 8px;
   margin-right: 8px;
 }
 
@@ -106,6 +109,8 @@ input[type='range'] {
   outline: none;
   -webkit-appearance: none;
   cursor: pointer;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 input[type='range']::-webkit-slider-thumb {
@@ -114,4 +119,13 @@ input[type='range']::-webkit-slider-thumb {
   height: 12px;
   background: black;
   border-radius: 2px;
+}
+
+.model-update-button {
+  cursor: pointer;
+  border: 0;
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: var(--button-color);
+  background-color: var(--primary-color);
 }
